@@ -5,8 +5,10 @@ import "@leenguyen/react-flip-clock-countdown/dist/index.css";
 import VideoBG from "./assets/video.mp4";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
+  <SpeedInsights/>
   const [targetTime] = useState(
     parseInt(localStorage.getItem("targetTime")) ||
       new Date().getTime() + 24 * 3600 * 1000
